@@ -14,11 +14,11 @@ import java.util.List;
 
 @Service
 @AllArgsConstructor
+@Transactional
 public class RadarServiceHandler {
     private RadarRepository radarRepository;
 
     @EventHandler
-    @Transactional
     public void on(RadarCreatedEvent event){
         Radar radar = new Radar();
         radar.setId(event.getId());

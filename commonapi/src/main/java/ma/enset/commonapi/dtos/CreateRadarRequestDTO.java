@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor @AllArgsConstructor
 public class CreateRadarRequestDTO {
-    public double maxVitesse;
-    public double latitude;
-    public double longitude;
+    private double maxVitesse;
+    private double latitude;
+    private double longitude;
 }

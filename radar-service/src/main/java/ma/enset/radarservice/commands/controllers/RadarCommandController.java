@@ -4,18 +4,13 @@ import lombok.AllArgsConstructor;
 import ma.enset.commonapi.commands.CreateRadarCommand;
 import ma.enset.commonapi.dtos.CreateRadarRequestDTO;
 import org.axonframework.commandhandling.gateway.CommandGateway;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
 
 @RestController
-@RequestMapping("/command/radar")
+@RequestMapping("/commands/radar")
 @AllArgsConstructor
-@Service
 public class RadarCommandController {
     private CommandGateway commandGateway;
 

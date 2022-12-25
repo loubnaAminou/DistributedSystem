@@ -12,13 +12,13 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/query/radar")
+@RequestMapping("/query/radars")
 @AllArgsConstructor
 public class RadarRestController {
     private QueryGateway queryGateway;
 
     @GetMapping("/allRadars")
-    public List<Radar> getAll(){
+    public List<Radar> getAllRadars(){
         return queryGateway.query(new FindAllRadars(), ResponseTypes.multipleInstancesOf(Radar.class)).join();
     }
 }
