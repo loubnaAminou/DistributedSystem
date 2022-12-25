@@ -32,4 +32,5 @@ public class RadarServiceHandler {
     public List<Radar> on(FindAllRadars query){
         return radarRepository.findAll();
     }
+
 }
